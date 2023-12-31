@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>○○の塾｜純伸舘</title>
+    <title>城南区のアットホームな塾｜純伸舘</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'custom', 'data-turbolinks-track': 'reload' %>
@@ -16,15 +15,13 @@
   </head>
 
   <body>
-  
   <header class="header-fixed">
-
   </header>
 
     <%= yield %>
   <footer>
       <div class="footer-container">
-          <p class="company-name">◯◯の塾 純伸館</p>
+          <p class="company-name">城南区のアットホームな塾 純伸館</p>
           <p class="contact">Tel: <a href="tel:+1234567890">123-456-7890</a></p>
           <p class="address">123 Main Street, Anytown, AS 12345</p>
           <% if user_signed_in? %>
