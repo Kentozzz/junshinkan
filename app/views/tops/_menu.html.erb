@@ -1,0 +1,27 @@
+<div class="top slide-in-nav" id="delayed-nav">
+  <nav class="nav">
+    <img src="/assets/1.jpg" alt="Icon" id="nav-icon">
+    <ul class="menu_lists">
+      <li><%= link_to 'Top', root_path %></li>
+      <li><%= link_to 'サービス紹介', root_path(anchor: 'small-image-box')  %></li>
+      <li><%= link_to '最新情報', root_path(anchor: 'latest-info') %></li>
+      <li><%= link_to 'コース・金額', root_path(anchor: 'pricing-section') %></li>
+      <li><%= link_to '講師紹介', root_path(anchor: 'target-section') %></li>
+    </ul>
+  </nav>
+</div>
+
+<script>
+  window.addEventListener('pageshow', function() {
+    var nav = document.getElementById('delayed-nav');
+    if(nav) {
+      // CSSのopacityプロパティだけでなく、transformもリセットします
+      nav.style.opacity = 0;
+      nav.style.transform = 'translateY(-100%)';
+      setTimeout(function() {
+        nav.style.opacity = 1;
+        nav.style.transform = 'translateY(0%)'; // 画面の上からスライドイン
+      }, 1000); // 1000ミリ秒後（1秒後）に実行
+    }
+  });
+</script>

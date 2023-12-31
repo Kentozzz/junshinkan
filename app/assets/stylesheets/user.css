@@ -1,0 +1,195 @@
+/* admin.css */
+
+:root {
+  --sidebar-width: 300px; /* サイドバーの幅をカスタムプロパティとして設定 */
+}
+
+.admin-container {
+  display: flex;
+  height: 100vh; /* 全画面の高さに合わせます */
+}
+
+.sidebar {
+  width: var(--sidebar-width);
+  background: #f7f7f7; /* サイドバーの背景色 */
+  padding: 20px; /* サイドバーの内側にスペースを作る */
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1); /* サイドバーシャドウ */
+}
+
+.user-list {
+  flex: 1; /* 残りのスペースを全て使う */
+  padding: 20px; /* コンテンツに余白を追加 */
+  overflow-y: auto; /* ユーザー一覧が長くなった場合スクロールを可能に */
+}
+
+.user-list ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.user-list li {
+  border-bottom: 1px solid #eaeaea; /* リストのアイテムを区切る薄いライン */
+  padding: 10px 0; /* アイテムの上下にスペース */
+  display: flex; /* アイテム内の要素を横に並べる */
+  justify-content: space-between;
+}
+
+.user-list a {
+  margin-right: 15px;
+  text-decoration: none; /* リンクの下線を消す */
+  color: #333; /* リンクテキストの色 */
+  transition: color 0.3s; /* 色の変化にアニメーションを適用 */
+}
+
+.user-list a:hover {
+  color: #007bff; /* ホバー時のリンクテキストの色 */
+}
+
+/* スタイルの追加ボタン */
+.edit-button, .delete-button {
+  border: none;
+  padding: 6px 12px;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.edit-button {
+  background-color: #ffc107;
+  color: #212529; /* ボタンテキストの色 */
+}
+
+.edit-button:hover {
+  background-color: #e0a800;
+}
+
+.delete-button {
+  background-color: #dc3545;
+  margin-left: 10px; /* 編集と削除のボタンの間隔 */
+  color: #fff;
+}
+
+.delete-button:hover {
+  background-color: #c82333;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* sidebar.css */
+.sidebar {
+  background-color: #333; /* 濃い背景色 */
+  padding: 20px; /* サイドバーパディング */
+  color: #fff; /* テキストカラー */
+  min-width: 200px; /* サイドバーの最小幅 */
+}
+
+.sidebar-link {
+  display: block; /* リンクをブロック要素として表示 */
+  padding: 10px 15px; /* パディング */
+  margin: 10px 0; /* 上下の余白 */
+  color: #fff; /* リンクカラー */
+  text-decoration: none; /* 下線を消去 */
+  font-weight: bold; /* 文字を太く */
+  background-color: #444; /* 背景を少し明るい色に */
+  border-radius: 3px; /* 角を滑らかに */
+  transition: background-color 0.3s; /* カラートランジションの効果 */
+}
+
+.sidebar-link:hover {
+  background-color: #555; /* ホバー時の背景色 */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.user_detail {
+  width: 100%;
+  background-color: #f9f9f9; /* 薄い背景色 */
+  border-radius: 8px; /* 角を丸める */
+  padding: 20px; /* 内部スペース */
+  max-width: 600px; /* 最大幅 */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* ソフトな影 */
+}
+
+.user_detail h2 {
+  color: #333; /* タイトルの色 */
+  margin-bottom: 20px; /* タイトルの下の余白 */
+  text-align: center; /* タイトルを中央揃え */
+}
+
+.user_info {
+  background-color: #fff; /* 白い背景色 */
+  padding: 15px; /* 内部スペース */
+  border-radius: 8px; /* 角を丸める */
+}
+
+.user_info strong {
+  display: block; /* ブロックレベルで表示 */
+  margin-bottom: 5px; /* 強調部分の下の余白 */
+  color: #666; /* 強調の色 */
+  font-weight: bold; /* 太字 */
+}
+
+.user_info p {
+  margin-bottom: 10px; /* 段落の下の余白 */
+  color: #333; /* 段落テキストの色 */
+  font-size: 0.9em; /* 文字の大きさ */
+}
+
+.edit-button, .delete-button {
+  display: inline-block; /* 横並びにする */
+  margin: 5px; /* 周りの余白 */
+  padding: 10px 15px; /* 内部スペース */
+  border-radius: 4px; /* 角を丸める */
+  text-decoration: none; /* テキストの下線を消す */
+  color: #fff; /* テキストの色 */
+  background-color: #007bff; /* 背景の色（例: Bootstrapのプライマリーカラー） */
+}
+
+.delete-button {
+  background-color: #dc3545; /* 背景の色（例: Bootstrapのデンジャーカラー） */
+}
+
+.edit-button:hover, .delete-button:hover {
+  background-color: darken(#007bff, 10%); /* ホバー時に少し暗くする（色の例は編集ボタンの場合） */
+  text-decoration: none; /* ホバー時の下線を消す */
+}
+
+
+.form_box {
+  padding: 10px 100px;
+}

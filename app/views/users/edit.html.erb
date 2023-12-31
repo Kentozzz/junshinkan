@@ -1,0 +1,41 @@
+<div class="container">
+  <div class="container_box">
+    <h2>Edit </h2>
+
+    <%= form_with(model: @user, url: registration_path(@user), local: true, method: :put) do |f| %>
+      <%#= render 'devise/shared/error_messages', resource: resource %>
+
+      <div class="field">
+        <%= f.label :email %><br />
+        <%= f.email_field :email, autofocus: true %>
+      </div>
+
+      <%# ここでusernameのフィールドを追加します。（もしユーザーモデルにusernameがある場合） %>
+      <div class="field">
+        <%= f.label :名前 %><br />
+        <%= f.text_field :name %>
+      </div>
+
+      <div class="field">
+        <%= f.label :パスワード %> <%= t('.leave_blank_if_no_change') %><br />
+        <%= f.password_field :password, autocomplete: 'new-password' %>
+      </div>
+
+      <div class="field">
+        <%= f.label :確認用パスワード %><br />
+        <%= f.password_field :password_confirmation, autocomplete: 'new-password' %>
+      </div>
+
+      <div class="field">
+        <%= f.label :現在のパスワード %> <%= t('.required_for_changes') %><br />
+        <%= f.password_field :current_password, autocomplete: 'current-password' %>
+      </div>
+
+      <div class="actions">
+        <%= f.submit t('.update') %>
+      </div>
+    <% end %>
+
+    <%= link_to t('.back'), :back %>
+  </div>
+</div>

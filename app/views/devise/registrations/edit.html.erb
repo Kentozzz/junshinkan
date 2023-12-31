@@ -1,0 +1,55 @@
+<div class="container">
+  <div class="container_box">
+  <%= console %>
+    <%= form_with(model: @user, url: registration_path(@user), local: true, method: :put) do |f| %>
+      <%= render "devise/shared/error_messages", resource: resource %>
+
+      <div style="margin-bottom: 15px;">
+        <%= f.label :名前, style: "display: block; margin-bottom: 5px;" %>
+        <%= f.text_field :name, autofocus: true, autocomplete: "name", style: "width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px;" %>
+      </div>
+
+      <div style="margin-bottom: 15px;">
+        <%= f.label :email, style: "display: block; margin-bottom: 5px;" %>
+        <%= f.email_field :email, autocomplete: "email", style: "width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px;" %>
+      </div>
+
+      <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+        <div style="margin-bottom: 15px;">Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
+      <% end %>
+
+      <div style="margin-bottom: 15px;">
+        <%= f.label :パスワード, style: "display: block; margin-bottom: 5px;" %>
+        <i style="display: block; margin-bottom: 5px;">(変更したくない場合は空白のままにしてください)</i>
+        <%= f.password_field :password, autocomplete: "new-password", style: "width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px;" %>
+        <% if @minimum_password_length %>
+          <br />
+          <em style="display: block; margin-bottom: 5px;"><%= @minimum_password_length %> 文字以上必要です。</em>
+        <% end %>
+      </div>
+
+      <div style="margin-bottom: 15px;">
+        <%= f.label :確認用パスワード, style: "display: block; margin-bottom: 5px;" %>
+        <%= f.password_field :password_confirmation, autocomplete: "new-password", style: "width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px;" %>
+      </div>
+
+      <div style="margin-bottom: 15px;">
+        <%= f.label :現在のパスワード, style: "display: block; margin-bottom: 5px;" %>
+        <i style="display: block; margin-bottom: 5px;">(変更するには現在のパスワードが必要です)</i>
+        <%= f.password_field :current_password, autocomplete: "current-password", style: "width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px;" %>
+      </div>
+
+      <div style="margin-bottom: 20px;">
+        <%= f.submit "更新する", style: "background-color: #4CAF50; color: white; padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer;" %>
+      </div>
+    <% end %>
+
+    <h3 style="margin-top: 40px;">アカウントの削除</h3>
+
+    <div style="margin-bottom: 15px;">
+      <%= button_to "このアカウントを削除する", registration_path(resource_name), data: { confirm: "本当によろしいですか?", turbo_confirm: "本当によろしいですか?" }, method: :delete, style: "background-color: #f44336; color: white; padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer;" %>
+    </div>
+
+    <%= link_to "戻る", :back, style: "display: block; margin-bottom: 15px; color: #007bff; text-decoration: none;" %>
+  </div>
+</div>

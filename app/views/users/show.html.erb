@@ -1,0 +1,47 @@
+<!-- user_detail.html.erb -->
+<div class="container">
+  <div class="container_box">
+    <div class="admin-container">
+      <%= render 'sidebar' %>
+      
+      <div class="user_detail">
+        <h2>ユーザー詳細</h2>
+
+        <div class="user_info">
+          <strong>名前:</strong>
+          <p><%= @user.name %></p>
+
+          <strong>メールアドレス:</strong>
+          <p><%= @user.email %></p>
+
+          <strong>アカウント作成日:</strong>
+          <p><%= @user.created_at.strftime("%Y年%m月%d日") %></p>
+
+          <strong>管理者権限:</strong>
+          <p><%= @user.admin %></p>
+          <% if @user.admin == false %>
+            <p>※一般管理者は管理者の作成、編集、削除権限はありません。</p>
+            <p>※一般管理者は自分自身を編集、削除することができます。</p>
+            <p>※一般管理者は新規ニュース作成、編集、削除権限があります。</p>
+            <p>※一般管理者は新規講師紹介の作成、編集、削除権限があります。</p>
+          <% else %>
+            <p>※最高管理者は管理者の作成、削除権限があります。</p>
+            <p>※最高管理者は新規ニュース作成、編集、削除権限があります。</p>
+            <p>※最高管理者は新規講師紹介の作成、編集、削除権限があります。</p>
+          <% end %>
+          <% if current_user.id == @user.id || current_user.admin? %>
+            <%= link_to '削除', user_registration_path(@user), 
+              method: :delete, 
+              data: { confirm: '本当に削除しますか？' }, 
+              class: 'delete-button' %>
+            <% if current_user.id == @user.id %>
+              <%= link_to '編集', edit_user_registration_path(@user), class: 'edit-button' %>
+
+            <% end %>
+          <% end %>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</div>

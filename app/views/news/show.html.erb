@@ -1,0 +1,31 @@
+<!-- app/views/news/show.html.erb -->
+<div class="container">
+  <div class="container_box">
+    <%= render 'tops/menu' %>
+
+    <div class="news-detail-container">
+
+    <% if user_signed_in? && current_user.admin? %>
+      <div class="news-actions">
+        <%= link_to '編集', edit_news_path(@news), class: 'action-link edit-link' %>
+        <%= link_to '削除', news_path(@news), method: :delete, data: { confirm: '削除してもよろしいですか?' }, class: 'action-link delete-link' %>
+      </div>
+    <% end %>
+      <div class="news-title">
+        <h1><%= @news.title %></h1>
+      </div>
+
+      <div class="news-meta">
+        <p><%= @news.created_at.strftime('%Y年%m月%d日') %></p>
+      </div>
+      
+      <div class="news-content">
+        <p><%= @news.content %></p>
+      </div>
+      
+      <div class="news-back-link">
+        <%= link_to 'ニュース一覧に戻る', news_index_path, class: 'back-link' %>
+      </div>
+    </div>
+  </div>
+</div>

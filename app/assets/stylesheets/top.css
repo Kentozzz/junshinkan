@@ -1,0 +1,710 @@
+/* TOP */
+/* app/assets/stylesheets/application.css */
+
+.header-fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+.home-icon-link {
+  position: absolute;
+  left: 10px;
+}
+
+.header-title {
+  font-size: 2em;
+  text-align: center;
+  flex-grow: 1;
+}
+
+/* マージンが不要な最後の要素には admin-link-last クラスを適用 */
+.admin-link-last {
+  margin-right: 0;
+}
+
+/* 全体のレイアウトを中央寄せに */
+.top {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 0;
+  background-color: #ffffff;
+  z-index: 9999;
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  z-index: 100; /* 必要に応じて調整 */
+  display: flex;
+  align-items: center;  /* ナビゲーションバー内の要素を縦方向の中心に揃える */
+
+}
+
+#nav-icon{
+  width: 50px; /* アイコンの大きさ */
+  height: auto; /* アイコンの高さを自動 */
+  margin-right: 20px; /* アイコンの右側に余白を取る */
+}
+
+.nav {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  justify-content: center; /* 左端から要素を並べて行きます */
+}
+
+/* ヘッダー全般のスタイリング */
+header {
+  padding: 10px 20px; /* パディングを調節 */
+  background: #fff; /* 背景色を白に設定 */
+  border-bottom: 1px solid #eaeaea; /* 下端にボーダーを追加 */
+  display: flex; /* Flexbox を適用 */
+  align-items: center; /* アイコンを中央に縦揃え */
+}
+
+/* ホームアイコンのスタイリング */
+.home-icon {
+  font-size: 24px; /* アイコンのサイズを設定 */
+  color: #333; /* アイコンの色を設定 */
+  transition: color 0.3s ease; /* ホバー時の色変化を滑らかにするためのトランジション設定 */
+}
+
+/* ホームアイコンにホバーしたときのスタイル */
+.home-icon:hover {
+  text-decoration: none; /* テキストの下線を消去 */
+}
+
+/* リンクに関するスタイルをリセット */
+.home-icon-link {
+  text-decoration: none; /* リンクの下線を無効化 */
+}
+
+.menu_lists {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  width: 100%;
+  max-width: 800px;
+}
+
+.menu_lists li a {
+  text-decoration: none;
+  transition: color .2s;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 16px;
+}
+
+.menu_lists li a:hover {
+  color: #967BB6;
+}
+
+
+
+
+
+
+
+
+
+
+
+.image_box {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-top: (9 /16 * 100); /* 例えば画像が16:9の比率であれば、56.25% (9 / 16 * 100) */
+  overflow: hidden; /* 画像がコンテナ外にはみ出ないようにする */
+}
+
+.slide {
+  width: 100%; /* スライド画像を画面幅いっぱいに */
+  height: auto; /* 縦幅を自動調整して縦横比を保持 */
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: opacity 1s;
+  z-index: -1;
+}
+
+.slide.active {
+  opacity: 1;
+  z-index: 1;
+}
+
+/* styles.css */
+/* styles.css */
+.message-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* 画面の高さいっぱい */
+  padding: 30px; /* コンテンツにパディングを追加 */
+  /* background-color: #ffffff; */
+  color: #333; /* テキストの色 */
+}
+
+
+
+.message-line {
+  display: block; /* ブロック要素として扱う */
+  text-align: center; /* 中央配置 */
+
+  font-size: 3rem; /* 文字サイズを大きく */
+  line-height: 1.2; /* 行の高さを設定 */
+  margin-bottom: 1rem; /* 行と行の間隔を空ける */
+  font-weight: 300; /* フォントの軽いウェイトを適用 */
+  color: #444; /* やや暗いテキスト色 */
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1); /* サブトルなテキスト影を追加 */
+}
+
+@media (max-width: 992px) {
+  .message-line {
+    font-size: 2.5rem; /* 小さめのデバイスでは文字サイズを小さく */
+  }
+}
+
+@media (max-width: 768px) {
+  .message-line {
+    font-size: 2rem; /* より小さなデバイスではさらに文字サイズを小さく */
+  }
+}
+
+
+
+
+
+/* カード */
+#small-image-box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.card_box {
+   flex: 1;
+   max-width: calc(33% - 15px); /* 3つを均等に分け、少しだけ間隔をあけます */
+   margin-bottom: 20px; /* カード下部と次行要素との間隔を作ります */
+   border: 1px solid #ddd;
+   border-radius: 5px; /* カードの角を丸くします */
+   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15); /* カードに少し影をつけて立体感を出します */
+   overflow: hidden; /* カード内の要素がはみ出した場合に見えないようにします */
+   flex-basis: 100%; /* モバイルサイズでは縦に並べるために100%に設定 */
+   background-color: #ffffff;
+
+}
+
+.card_box .small_image img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover; /* 画像が枠を超えてしまう場合、トリミングします */
+}
+
+
+.card_box .in_image_message {
+  position: absolute;
+  bottom: 0;
+  background: rgba(0,0,0, .6); /* 背景を半透明の黒に */
+  color: #fff; /* テキストを白に */
+  width: 100%;
+  text-align: center;
+  padding: 10px 0;
+  font-size: 1.2em;
+}
+
+.card_box .card_message {
+  padding: 20px; /* メッセージの内側にスペースを作ります */
+  color: #333;
+  line-height: 1.6; /* テキストの行間を広くします */
+  font-size: 1em;
+}
+
+ .image_box {
+  width: 800px;  /* 好きな大きさに設定してください */
+  height: 570px; /* 好きな大きさに設定してください */
+  overflow: hidden;  /* 枠を超える部分を非表示に */
+}
+.image_box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+
+
+
+
+
+
+
+
+/* main.css */
+.concept {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px;
+  /* background-color: #ffffff; */
+  padding: 100px 0;
+}
+
+.news_image {
+  flex: 1;
+  width: 100%;
+  max-width: 400px; /* 画像の最大幅を修正してレスポンシブに */
+  margin: 0 auto;
+}
+
+.news_image img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px; /* 画像に丸みを帯びたボーダーを追加 */
+}
+
+.concept-box {
+  flex: 2;
+  padding: 20px;
+  text-align: left;
+  max-width: 600px;
+}
+
+.concept-title {
+  font-size: 2.2em;
+  color: #333;
+  font-weight: 600;
+  margin-bottom: 50px;
+}
+
+.concept-message {
+  font-size: 1.1em;
+  line-height: 1.7;
+  color: #555;
+}
+
+.concept-highlight {
+  color: #967BB6;
+  font-weight: 500;
+}
+
+/* ボタンのスタイルは前回提示したものが使用されていないため、この部分は削除しました。 */
+
+
+
+
+
+
+
+
+
+
+
+
+/* This is for when the button is not a link */
+
+.button:focus,
+.button:active {
+  outline: none;
+  box-shadow: none;
+}
+
+
+
+
+
+
+
+
+
+/* ニュース */
+/* 全体のレイアウトを中央寄せに */
+#latest-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 80px 0 150px 0;
+  /* background-color: #f5f5f5; */
+}
+
+#latest-info .news_image {
+  max-width: 900px;
+  width: 100%;
+  margin-bottom: 50px;
+  overflow: hidden;
+}
+
+#latest-info .news_image img {
+  width: 100%;
+}
+
+/* ニュース、ボタン、リスト全体を中央寄せに */
+#latest-info .news_box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 600px;
+  width: 100%;
+}
+
+#latest-info .news {
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+#latest-info .news_lists {
+  width: 100%;
+  list-style: none;
+  padding: 0;
+}
+
+#latest-info .news_list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+#latest-info .news_date {
+  flex-shrink: 0;
+}
+
+#latest-info .news_title a {
+  color: #333;
+  text-decoration: none;
+  transition: color .2s;
+}
+
+#latest-info .news_title a:hover {
+  color: #967BB6;
+}
+
+.btn-hover.color-1 {
+  font-size: large;
+  margin-top: 20px;
+  border: solid 1px #009823;
+  background-color: transparent;
+  cursor: pointer;
+  transition: background-color 0.3s, color .3s;
+}
+
+.btn-hover.color-1:hover {
+  background-color: #967BB6;
+  color: #fff;
+}
+
+.image_box {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.small_image_box {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.small_image {
+  position: relative;
+}
+
+.news-item-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.news-item-link:hover {
+  /* ホバー時のスタイルを追加 */
+  background-color: #f0f0f0;
+}
+
+.news-item {
+  cursor: pointer;
+}
+
+
+
+
+.card_box {
+  position: relative;
+  flex: 1;
+}
+
+.image_box {
+  margin-bottom: 150px;
+}
+
+/* 共通の画像スタイル */
+img {
+  max-width: 100%; 
+  height: auto; 
+}
+
+/* concept_imageのスタイル調整 */
+.concept_image img {
+  width: 300px;
+}
+
+/* news_imageのスタイル調整 */
+.news_image img {
+  width: 500px;
+}
+
+/* price_imageのスタイル調整 */
+.price_image img {
+  width: 400px;
+}
+
+.new {
+  color: #333;
+  padding: 3px 6px;
+  border: 1px solid #333;
+  border-radius: 2px;
+  font-weight: 500;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  background-color: transparent;
+  letter-spacing: 0.05rem;
+  display: inline-block;
+  vertical-align: middle;
+  transition: all 0.2s ease-in-out; 
+}
+
+
+
+
+/* Instructor Section Styles */
+.instructor-section {
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.instructor-content {
+  display: flex;
+  flex-direction: row;
+}
+
+.instructor-title {
+  font-size: 2em;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.instructor-image-container {
+  margin-top: 120px;
+  width: 50%;
+  text-align: right;
+  margin-right: 20px;
+
+}
+
+.instructor-profile {
+  width: 50%; 
+  text-align: left; 
+  padding: 150px 20px;
+}
+
+
+.instructor-name {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.instructor-position,
+.instructor-specialty,
+.instructor-description {
+  margin-bottom: 10px;
+}
+
+.btn-instructor {
+  margin-top: 15px;
+}
+
+
+
+
+
+/* Pricing Section Styles */
+.pricing-section {
+  /* background: #e2e2e2; */
+  /* padding: 150px 0px; */
+  text-align: center;
+}
+
+.pricing-header {
+  margin-bottom: 1em;
+}
+
+.pricing-title {
+  font-size: 1.75em;
+  color: #444;
+}
+
+.pricing-card {
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px 0;
+  width: 80%;
+  background: white;
+}
+
+.plan-name {
+  font-size: 1.5em;
+  border-bottom: 2px solid #444;
+  padding-bottom: 0.25em;
+  margin-bottom: 0.75em;
+  color: #444;
+}
+
+.plan-price {
+  font-size: 2.25em;
+  color: #dd3333;
+  margin-bottom: 1em;
+}
+
+.plan-features {
+  text-align: left;
+  list-style: none;
+  padding: 0;
+  margin-bottom: 1.5em;
+}
+
+.plan-features li {
+  padding: 0.25em 0;
+}
+
+.btn-pricing {
+  padding: 0.5em 1em;
+  font-size: 1em;
+  background-color: #009823;
+  color: white;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-pricing:hover {
+  background-color: #218838;
+}
+
+.btn {
+  display: inline-block;
+  text-decoration: none;
+}
+
+#pricing-section_margin {
+  margin-bottom: 150px;
+}
+
+@media only screen and (max-width: 767px) {
+  #small-image-box {
+    flex-direction: column;
+  }
+  .card_box {
+    max-width: none; /* スマホサイズではカードの最大幅を解除 */
+    flex: none; /* flexプロパティをリセット */
+    width: 100%; /* スマホサイズではカードの幅を100%に */
+  }
+}
+
+
+
+
+
+/* 追随するボタンのスタイリング */
+/* 追随するボタンのスタイリング */
+.floating-button {
+  /* 既存のスタイル */
+  font-family: 'Noto Serif JP', serif;
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+  width: 100px; /* テキストに合わせて幅を広げる */
+  height: 100px; /* テキストに合わせて高さを調整する */
+  border-radius: 50%;
+  background-color: #967BB6; /* 藤色の背景 */
+  color: white;
+  text-decoration: none;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  transition: background-color 0.3s, transform 0.3s ease-in-out;
+  will-change: transform;
+  
+  /* Flexboxを使用してテキストを中央に配置 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px; /* テキストのサイズを調整 */
+  padding: 8px; /* 内側の余白を持たせる */
+  transition: transform 0.3s ease;
+}
+
+.floating-button .line-break {
+  display: block; /* span要素をブロック要素として表示 */
+  text-align: center;   /* テキストを中央揃えにする */
+  text-decoration: none; /* 下線を無しにする */
+}
+
+
+/* ホバー時のスタイル */
+.floating-button:hover {
+  /* ボタンを右に15度傾ける */
+  transform: rotate(15deg);
+  background-color: #7C6A96;
+
+}
+
+  body, html {
+    font-family: 'Noto Serif JP', serif;
+    height: 100%;
+    margin: 0;
+  }
+  
+  body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('logo.jpg') no-repeat right bottom;
+    background-size: cover;
+    opacity: 0.1;
+    z-index: -2;
+    background-size: 500px 500px; /* ここでは画像のサイズを100pxに指定します。必要に応じてサイズを変更してください。 */
+  
+  }
+  
+  .content {
+    position: relative;  /* 重要: このクラスが適用された要素がz-indexを受け付けるために必要です。 */
+    z-index: 1;  /* ここで正のz-indexを設定して、背景よりも前に表示させます。 */
+    /* 以下にその他のスタイルを追加 */
+  }
+
+
+  .slide-in-nav {
+    transform: translateY(-100%); /* 最初は画面の上に配置 */
+    transition: transform 1s; /* 2秒かけて位置を変更 */
+  }

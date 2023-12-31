@@ -1,0 +1,199 @@
+<link href="https://fonts.googleapis.com/earlyaccess/nicomoji.css" rel="stylesheet">
+<div class="container">
+  <div class="container_box">
+    <div class="top_menu"></div>
+    <div class="top">
+      <nav class="nav">
+        <img src="/assets/1.jpg" alt="Icon" id="nav-icon">
+        <ul class="menu_lists">
+          <li><a id="top-link" href="#">Top</a></li>
+          <li><a id="latest-info-link" href="#">サービス紹介</a></li>
+          <li><a id="latest-news-link" href="#">最新情報</a></li>
+          <li><a id="amount-link" href="#">コース・金額</a></li>
+          <li><a id="instructor-link" href="#">講師紹介</a></li>
+        </ul>
+      </nav>
+    </div>
+
+
+    <div class="image_box">
+      <%= image_tag "1.jpg", class:"slide slide1 active" %>
+      <%= image_tag "IMG_0461.JPG", class:"slide slide2" %>
+      <%= image_tag "IMG_0652.JPG", class:"slide slide3" %>
+    </div>
+
+    <!-- index.html.erb -->
+        <div>
+      <h1>サービス紹介</h1>
+    </div>
+    <div id="small-image-box" class="small_image_box">
+      <div class="card_box">
+        <div class="small_image">
+          <%= image_tag "IMG_0653.JPG" %>
+          <p class="in_image_message">授業</p>
+        </div>
+        <div class="card_message">
+          授業はすべて塾長が個別に直接指導します。<br>生徒とよく話し、質問を引き出し、できない原因を見つけ出すことで、「わからない」を根本からなくします。全員の進捗状況や理解度を把握できるため、生徒ごとに的確な指導が可能です。幅広い学力層に対応します。
+
+        </div>
+      </div>
+      
+      <div class="card_box">
+        <a href="#target-section">
+          <div class="small_image">
+            <%= image_tag "small_photo.JPG" %> <!-- 仮にファイル名を変更しました -->
+            <p class="in_image_message">講師</p>
+          </div>
+        </a>
+        <div class="card_message">
+          ラ・サール卒業　長年の学習指導。進路指導の経験が豊富な塾長が直接指導します。幅広い学力層に対応します。<br>
+          授業はすべて塾長が個別に直接指導します。生徒とよく話し、質問を引き出し、できない原因を見つけ出すことで、「わからない」を根本からなくします。全員の進捗状況や理解度を把握できるため、生徒ごとに的確な指導が可能です。幅広い学力層に対応します。
+        </div>
+      </div>
+
+      <div class="card_box">
+        <div class="small_image">
+          <%= image_tag "27986775_m.jpg" %> 
+          <p class="in_image_message">両立</p>
+        </div>
+        <div class="card_message">
+          純伸舘は勉強だけでなく、部活や習い事を頑張る子を応援します。予定に合わせて最適なプランをご提案します。<br>カリキュラムも1人ひとり違うので、休んだら授業に遅れるということもありません。無理なく無駄なく通うことで、勉強と部活・習い事を両立させていきます。
+        </div>
+      </div>
+    </div>
+
+    <div class="message-container">
+      <div class="message">
+        <span class="message-line">今までの「塾」のイメージとは違う</span>
+        <span class="message-line">アットホームな雰囲気で</span>
+        <span class="message-line">日頃の学習から受験指導までサポートします</span>
+      </div>
+    </div>
+
+
+
+    <div class="concept">
+      <div class="news_image">
+        <%= image_tag "27871243_s.jpg"%>
+      </div>
+      <div class="concept-box">
+        <h2 class="concept-title">学ぶことを楽しいと思える</h2>
+        <p class="concept-message">できないことができるようになる喜びや知らないことを知るおもしろさなどを、純伸舘での<span class="concept-highlight">学びの中で感じてもらい</span>、勉強を嫌いなものから興味があるものに変えていくことで、自ら学ぶ姿勢を育みます。</p>
+      </div>
+    </div>
+
+    <div class="concept">
+      <div class="concept-box">
+        <h2 class="concept-title">自ら考える力をつける</h2>
+        <p class="concept-message">指導の中では、どんな問題でもすぐに答えを教えることはありません。少しずつヒントや例を出しながら、自ら考えるように促します。<br><br>ヒントは理解度や興味があること、習い事・スポーツなどに関連付けることで、答えにたどり着いたときに少しでも印象に残りやすいように工夫しています。</p>
+      </div>
+      <div class="news_image">
+        <%= image_tag "27366784_s.jpg"%>
+      </div>
+    </div>
+
+    <div class="concept">
+      <div class="news_image">
+        <%= image_tag "3561451_s.jpg"%>
+      </div>
+      <div class="concept-box">
+        <h2 class="concept-title">知識を使えるようになる</h2>
+        <p class="concept-message">公式を知っているが、どこで使えばよいかわかっていないことはありませんか。<br><br>純伸舘の指導では、公式や構文の使い方はもちろん、それをいつ使うのか、どこで使われているのかに気付けるような問題のとらえ方や考え方を併せて伝えていきます。<br>ただ知識をつけるだけにはさせません。</p>
+      </div>
+    </div>
+
+    <div id="latest-info">
+      <div class="news_box">
+        <div class="news">NEWS</div>
+        <ul class="news_lists">
+          <% @latest_news.each do |news_item| %>
+            <% if news_item.created_at > 24.hours.ago %>
+              <span class="new">NEW!</span>
+            <% end %>
+            <li class="news_list">
+              <div class="news_date"><b><%= news_item.created_at.strftime('%m/%d -') %></b></div>
+              <div class="news_title"><%= link_to news_item.title, news_path(news_item) %></div>
+            </li>
+          <% end %>
+        </ul>
+        <div class="concept_btn">
+          <%= button_to 'ニュース一覧', news_index_path, method: :get, class: 'btn-hover color-1', form: {class: 'inline'} %>
+        </div>
+      </div>
+    </div>
+
+    <!-- Price Section -->
+    <div>
+      <h1>コース・金額</h1>
+    </div>
+    <div class="pricing-section" id="pricing-section">
+      <div class="pricing-card">
+        <h3 class="plan-name">１.個別指導 スタンダード・アドバンス</h3>
+        <p class="plan-price">小学生 ¥14,000〜/月</p>
+        <p class="plan-price">中学生 ¥16,000〜/月</p>
+        <ul class="plan-features">
+          <li>最大 1 対 2 での塾長による個別指導。1 人ひとりの理解度に合わせて指導いたします。<br><br> スタンダードコース・・学校の学習内容理解を重視したコース。教科書やワークをメインに授業を進めます。<br> アドバンスコース・・実力養成を重視したコース。問題演習をメインに進めます。</li>
+          <li><br>対象:小学生~高校生<br>
+              指導教科:国語 ・ 数学(算数)・ 理科 ・ 社会 ・ 英語 <br> ※高校生は応相談 <br><br>曜日:月曜日 ・ 火曜日 ・ 水曜日 ・ 木曜日 ・ 金曜日 ・ 土曜日 <br>授業時間:1コマ 70分 ※時間割は別途参照</li>
+        </ul>
+        <%= button_to 'コース詳細', prices_path, method: :get, class: 'btn btn-pricing' %>
+      </div>
+    </div>
+
+    <div class="pricing-section">
+      <div class="pricing-card">
+        <h3 class="plan-name">２.ハイブリッドオンライン</h3>
+        <p class="plan-price">中学生 ¥14,000〜/月</p>
+        <p class="plan-price">高校生 ¥21,000〜/月</p>
+        <ul class="plan-features">
+          <li>ZOOMを使ったオンライン個別指導+対面での個別指導。スタンダードとアドバンスの 2 コース。<br>
+              毎月第 1 週のみ対面授業、他はオンライン授業。直接コミュニケーションをとる機会を持つことで、オンライン だけでは解決しきれない不安を解消します。</li>
+          <li><br>対象:中学生・高校生<br>
+              指導教科:国語 ・ 数学(算数)・ 理科 ・ 社会 ・ 英語 <br> ※高校生は応相談 <br><br>曜日:月曜日 ・ 火曜日 ・ 水曜日 ・ 木曜日 ・ 金曜日 ・ 土曜日 <br>授業時間:1コマ 70分 ※時間割は別途参照</li>
+        </ul>
+        <%= button_to 'コース詳細', prices_path(anchor: "hybrid_online"), method: :get, class: 'btn btn-pricing' %>
+      </div>
+    </div>
+
+    <div class="pricing-section", id="pricing-section_margin">
+      <div class="pricing-card">
+        <h3 class="plan-name">３.自習室利用コース</h3>
+        <p class="plan-price">中・高校生（全学年） ¥12,000/月</p>
+        <ul class="plan-features">
+          <li>授業は必要ないが、学習スペースが欲しいという子や家では集中できないという子などに最適のコース。<br> わからないところがあれば質問可能です。開校日であれば通い放題、時間も無制限です。<br> また、他塾との併用も可能です。</li>
+          <li><br>対象:中学生・高校生<br>曜日:月曜日~土曜日 <br>
+        </ul>
+        <%= button_to 'コース詳細', prices_path(anchor: "self_study_room"), method: :get, class: 'btn btn-pricing' %>
+        
+      </div>
+    </div>
+
+  <div>
+  <h1>講師紹介</h1>
+  </div>
+    <!-- Instructor Section -->
+    <div class="instructor-section", id ="target-section">
+      <div class="instructor-content">
+        <div class="instructor-profile">
+          <p class="instructor-position"><%= @staff.position %></p>
+          <h3 class="instructor-name"><%= @staff.name %></h3>
+          <div>○ 得意科目</div>
+          <p class="instructor-specialty"><%= @staff.specialty %></p>
+          <div>○ メッセージ</div>
+          <p class="instructor-description"><%= @staff.description %></p>
+          <%#= button_to '講師一覧', staffs_path, method: :get, class: 'btn btn-instructor' %>
+        </div>
+        
+        <div class="instructor-image-container">
+          <%#= image_tag(@staff.image, alt: @staff.name, class: 'instructor-image') %>
+            <% if @staff.image.attached? %>
+              <%= image_tag @staff.image, class: 'instructor-image' %>
+            <% else %>
+              <%= image_tag 'default.png', class: 'instructor-image' %>
+            <% end %>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>

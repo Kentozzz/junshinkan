@@ -1,0 +1,28 @@
+<div class="container">
+  <div class="container_box">
+
+  <h1>講師紹介</h1>
+  <% if user_signed_in? %>
+    <%= link_to '新規作成', new_staff_path, class: 'btn-primary' %>
+  <% end %>
+  <% @staffs.each do |staff| %>
+    <div class="staff-card">
+      <div class="staff-image">
+        <% if staff.image.attached? %>
+          <%= image_tag staff.image, class: 'staff-image-size' %>
+        <% else %>
+          <%= image_tag 'default.png', class: 'staff-image-size' %>
+        <% end %>
+      </div>
+      <h2><%= staff.name %></h2>
+      <p><%= staff.position %></p>
+      <p>得意科目: <%= staff.specialty %></p>
+      <p>一言メッセージ: <%= staff.description %></p>
+      <% if user_signed_in? %>
+        <%= link_to '編集', edit_staff_path(staff), class: 'edit-button-class' %>
+        <%= link_to '削除', staff_path(staff), method: :delete, data: { confirm: '講師情報を削除すると二度と復元はできません。本当に削除しますか？' }, class: 'delete-button-class' %>
+      <% end %>
+    </div>
+  <% end %>
+  </div>
+</div>

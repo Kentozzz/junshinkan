@@ -1,0 +1,232 @@
+<div class="container">
+  <div class="container_box">
+    <%= render 'tops/menu' %>
+    <p class="highlight">料金表</p>
+    ※料金表のダウンロードは
+    <%= link_to 'こちら', '/pdfs/r5_price_list.pdf' %><br>
+    <p class="highlight">個別指導 スタンダード・アドバンス</p>
+    <div class="timetable">
+      <table>
+        <thead>
+          <tr>
+            <th>-</th>
+            <th>週1コマ(月4コマ)</th>
+            <th>週2コマ(月8コマ)</th>
+            <th>週3コマ(月12コマ)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>小学生</td>
+            <td>¥14,000</td>
+            <td>¥21,000</td>
+            <td>¥29,400</td>
+          </tr>
+          <tr>
+            <td>中学1年生</td>
+            <td>¥16,000</td>
+            <td>¥24,000</td>
+            <td>¥33,600</td>
+          </tr>
+          <tr>
+            <td>中学2年生</td>
+            <td>¥18,000</td>
+            <td>¥27,000</td>
+            <td>¥37,800</td>
+          </tr>
+          <tr>
+            <td>中学3年生</td>
+            <td>¥21,000</td>
+            <td>¥31,500</td>
+            <td>¥44,100</td>
+          </tr>
+          <tr>
+            <td>高校1・2年生</td>
+            <td>¥23,000</td>
+            <td>¥34,500</td>
+            <td>¥48,300</td>
+          </tr>
+          <tr>
+            <td>高校3年生</td>
+            <td>¥24,000</td>
+            <td>¥36,000</td>
+            <td>¥50,400</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="timetable_box", id="hybrid_online">
+      <p class="highlight">ハイブリッドオンライン スタンダード・アドバンス</p>※中学生・高校生
+      <div class="timetable">
+        <table>
+          <thead>
+            <tr>
+              <th>週1コマ(月4コマ)</th>
+              <th>1年生</th>
+              <th>2年生</th>
+              <th>3年生</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>中学生</td>
+              <td>¥14,000</td>
+              <td>¥16,000</td>
+              <td>¥19,000</td>
+            </tr>
+            <tr>
+              <td style="background-color: #f9f9f9;">高校生</td>
+              <td style="background-color: #f9f9f9;">¥21,000</td>
+              <td style="background-color: #f9f9f9;">¥21,000</td>
+              <td style="background-color: #f9f9f9;">¥22,000</td>
+
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="timetable_box", id ="self_study_room">
+      <p class="highlight">自習室学習コース</p>※中学生・高校生
+      <div class="timetable">
+        <table>
+          <tbody>
+            <tr>
+              <td>中・高校生(全学年)</td>
+              <td>¥12,000</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="timetable_box">
+      <p class="highlight">入学金</p>※入学時のみ
+      <div class="timetable">
+        <table>
+          <tbody>
+            <tr>
+              <td>入学金</td>
+              <td>¥5,000</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="timetable_box">
+      <p class="highlight">教材費</p>※1教科あたりの金額<br>※その他必要に応じて購入した場合
+      <div class="timetable">
+        <table>
+          <tbody>
+            <tr>
+              <td>小学生</td>
+              <td>スタンダード: ¥1,600　アドバンス: ¥1,700 </td>
+            </tr>
+            <tr>
+              <td style="background-color: #f9f9f9;">中学生<br>高校生</td>
+              <td style="background-color: #f9f9f9;">スタンダード: ¥1,500　アドバンス: ¥1,700 </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="notification-box">
+      <h3 class="notification-title">Important Payment Notice</h3>
+      <ul class="notification-list">
+        <li>費用はすべて月額の料金です。</li>
+        <li>記載の料金には諸経費、消費税等を含みます。</li>
+        <li>原則、現金でのお支払いをお願いいたします。口座振り込みもございます。恐れ入りますが、振込み手数料はご負担願います。</li>
+      </ul>
+    </div>
+
+    <div class="timetable_box">
+    <p class="highlight">☆個別指導コース・ハイブリッドオンライン共通</p>
+    <strong>・校舎自習室、ZOOM 自習室の利用</strong><br>
+      授業日以外の学習時間を確保します。<br>
+      <br>
+    <strong>・LINE での学習管理</strong><br>
+      生徒、保護者、純伸舘の三者でグループを作成し、学習状況を共有します。<br>
+    <br>
+    <p class="highlight">時間割</p>
+        ※コース案内、時間割表のダウンロードは
+    <%= link_to 'こちら', '/pdfs/r5_course_schedules.pdf' %>
+    <table class="timetable">
+      <thead>
+        <tr>
+          <th>時限</th>
+          <th>月曜日</th>
+          <th>火曜日</th>
+          <th>水曜日</th>
+          <th>木曜日</th>
+          <th>金曜日</th>
+          <th>土曜日</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>15:50~17:00</td>
+          <td>個</td>
+          <td>個・自</td>
+          <td>個・自</td>
+          <td>個</td>
+          <td>個・自</td>
+          <td>-</td>
+        </tr>
+        <tr>
+          <td>17:05~18:15</td>
+          <td>-</td>
+          <td>個・自</td>
+          <td>個・自</td>
+          <td>-</td>
+          <td>個・自</td>
+          <td>個・自</td>
+        </tr>
+        <tr>
+          <td>18:20~19:30</td>
+          <td>-</td>
+          <td>個・自</td>
+          <td>個・自</td>
+          <td>-</td>
+          <td>個・自</td>
+          <td>個・自</td>
+        </tr>
+        <tr>
+          <td>19:35~20:45</td>
+          <td>個・自</td>
+          <td>個・自</td>
+          <td>個・自</td>
+          <td>個・自</td>
+          <td>個・自</td>
+          <td>個・自</td>
+        </tr>
+        <tr>
+          <td>20:50~22:00</td>
+          <td>個・自</td>
+          <td>個・自</td>
+          <td>個・自</td>
+          <td>個・自</td>
+          <td>個・自</td>
+          <td>個・自</td>
+        </tr>
+        <tr>
+          <td>22:00~22:30</td>
+          <td>質</td>
+          <td>質</td>
+          <td>質</td>
+          <td>質</td>
+          <td>質</td>
+          <td>質</td>
+        </tr>
+        <!-- 以下、3限目以降の授業を追加していく -->
+      </tbody>
+    </table>
+    ※個...個別指導、自...自習室、質...質問 <br>※休校日:日曜日(テスト前などは開校することがあります。)
+    <br>
+    <br>
+    <p class="highlight">☆季節講習は別途ご案内いたします。</p>
+  </div>
+  </div>
+</div>

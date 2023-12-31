@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>○○の塾｜純伸舘</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'custom', 'data-turbolinks-track': 'reload' %>
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,500&display=swap" rel="stylesheets">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;700&display=swap" rel="stylesheet">
+
+  </head>
+
+  <body>
+  
+  <header class="header-fixed">
+
+  </header>
+
+    <%= yield %>
+  <footer>
+      <div class="footer-container">
+          <p class="company-name">◯◯の塾 純伸館</p>
+          <p class="contact">Tel: <a href="tel:+1234567890">123-456-7890</a></p>
+          <p class="address">123 Main Street, Anytown, AS 12345</p>
+          <% if user_signed_in? %>
+            <p class="admin_page"><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></p>
+            <p class="admin_page"><%= link_to "管理者ページ", new_user_session_path %></p>
+          <% else %>
+            <p class="admin_page"><%= link_to "管理者ページ", new_user_session_path %></p>
+          <% end %>
+          <p class="copyright">&copy; 2023 純伸館 All Rights Reserved.</p>
+      </div>
+  </footer>
+  <%= link_to accesses_path, class: 'floating-button' do %>
+    当塾への<br>アクセス
+  <% end %>
+
+  </body>
+</html>

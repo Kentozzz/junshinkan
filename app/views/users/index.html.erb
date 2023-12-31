@@ -1,0 +1,24 @@
+<div class="container">
+  <div class="container_box">
+<!-- admin_users.html.erb -->
+    <div class="admin-container">
+      <%= render 'sidebar' %>
+      <div class="user-list">
+        <h1>管理者一覧</h1>
+        <ul>
+          <% @users.each do |user| %>
+
+            <li>
+              <%= link_to user.name, user_path(user) %>
+              <% if current_user.admin? %>
+                <div class="edit_delete_box">
+                  <%= link_to '削除', user_registration_path(user), method: :delete, data: { confirm: '本当に削除しますか？' } %>
+                </div>
+              <% end %>
+            </li>
+          <% end %>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

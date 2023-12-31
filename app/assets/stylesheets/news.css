@@ -1,0 +1,250 @@
+/* app/assets/stylesheets/news.scss */
+
+.news-list {
+  max-width: 800px;
+  margin: auto;
+}
+
+.news-item {
+  margin-bottom: 30px;
+  padding: 20px;
+  border-bottom: 1px solid #eaeaea;
+
+  h2 {
+    margin-bottom: 10px;
+  }
+
+  .date {
+    color: #888;
+    font-size: 0.9em;
+    margin-bottom: 10px;
+  }
+
+  p {
+    line-height: 1.6;
+  }
+}
+
+/* app/assets/stylesheets/news.scss */
+
+.btn {
+  padding: 0.5rem 1rem;         /* パディング */
+  color: #fff;                  /* テキストの色 */
+  background-color: #009823;    /* 背景色 */
+  border: none;                 /* 境界線のスタイル */
+  border-radius: 0.25rem;       /* 角丸のサイズ */
+  text-decoration: none;        /* テキストの装飾をなしに */
+  cursor: pointer;              /* カーソルをポインタに */
+  margin-bottom: 1rem;          /* 下マージン */
+  display: inline-block;        /* インラインブロック表示 */
+  transition: background-color 0.2s; /* 背景色のトランジション */
+}
+
+.btn-primary:hover {
+  background-color: #856A9D; /* ホバー時の背景色 */
+}
+
+.news-link {
+  display: block;
+  background-color: #f2f2f2; /* 背景色 */
+  color: #333;               /* テキストの色 */
+  padding: 0.5rem;           /* パディング */
+  border-radius: 0.25rem;    /* 角丸のサイズ */
+  text-decoration: none;     /* テキストの装飾をなしに */
+  margin-bottom: 0.5rem;     /* 下マージン */
+}
+
+.news-link:hover {
+  background-color: #e9e9e9; /* ホバー時の背景色 */
+}
+
+
+/* app/assets/stylesheets/news.scss or within application.scss */
+.news-container {
+  max-width: 800px; /* 適切な幅に調整 */
+  margin: 2rem auto;
+  padding: 2rem;
+  background: #f9f9f9; /* 背景色 */
+  border: 1px solid #e1e1e1; /* 境界線 */
+  border-radius: 5px; /* 角丸 */
+}
+
+.news-title {
+  font-size: 2rem;
+  color: #333; /* タイトルの色 */
+  margin-bottom: 1rem;
+}
+
+.news-content {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #555; /* 本文の色 */
+}
+
+.news-footer {
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid #e1e1e1; /* 上線 */
+  font-size: 0.85rem;
+  color: #777;
+  text-align: right;
+}
+
+/* app/assets/stylesheets/news.scss */
+.news-detail-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  line-height: 1.6;
+  color: #333;
+  
+  .news-title {
+    word-wrap: break-word; /* 長い単語やURLを途中で改行する */
+    white-space: pre-wrap; /* 改行と空白を保持し、必要に応じて折り返す */
+    overflow-wrap: break-word; /* 単語の途中で折り返しを行う */
+
+  
+    h1 {
+      margin: 0;
+      color: #333;
+    }
+  }
+  
+  
+  .news-meta {
+    margin-bottom: 30px;
+    color: #666;
+    
+    p {
+      margin: 0;
+    }
+  }
+  
+  .news-content {
+    margin-bottom: 40px;
+    
+    p {
+      margin: 0;
+    }
+  }
+  
+  .news-content p {
+    word-wrap: break-word; /* 長い単語やURLを途中で改行する */
+    white-space: pre-wrap; /* 改行と空白を保持し、必要に応じて折り返す */
+    overflow-wrap: break-word; /* 単語の途中で折り返しを行う */
+  }
+  
+  .news-back-link {
+    .back-link {
+      display: inline-block;
+      padding: 10px 20px;
+      text-decoration: none;
+      color: #ffffff;
+      background-color: #967BB6;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+      
+      &:hover {
+        background-color: #856A9D;
+      }
+    }
+  }
+}
+.news-actions {
+  display: flex;
+  justify-content: flex-start;
+  gap: 15px;
+  justify-content: center;
+  .action-link {
+    padding: 10px 15px;
+    text-decoration: none;
+    color: #fff;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.2s ease-in-out;
+    
+    &.edit-link {
+      background-color: #967BB6;
+      
+      &:hover {
+        background-color: #856A9D;
+      }
+    }
+    
+    &.delete-link {
+      background-color: #009823;
+      
+      &:hover {
+        background-color: #00891D;
+      }
+    }
+  }
+}
+
+/* app/assets/stylesheets/news.scss */
+
+.news-container {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #f7f7f7;
+  border-radius: 5px;
+}
+
+.field {
+  margin-bottom: 20px;
+  margin-right: 20px;
+}
+
+.field label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.form-control {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #cccccc;
+  border-radius: 3px;
+}
+
+.actions {
+  text-align: center;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 15px;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  background-color: #967BB6;
+  border: 1px solid #009823;
+  border-radius: 5px;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.btn-primary:hover {
+  background-color: #967BB6;
+}
+
+.back-link {
+  display: block;
+  margin-top: 15px;
+  text-align: center;
+  text-decoration: none;
+  color: #333333;
+  font-weight: bold;
+}
+
+.back-link:hover {
+  text-decoration: underline;
+}
+
+
+.news_side_header {
+  display: flex;
+}

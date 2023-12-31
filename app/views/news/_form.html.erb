@@ -1,0 +1,32 @@
+<div class="container">
+  <div class="container_box">
+    <%= form_with(model: form_model, local: true) do |form| %>
+      <div class="news-container">
+        <% if form_model.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(form_model.errors.count, "error") %> prohibited this form from being saved:</h2>
+          
+          <ul>
+            <% form_model.errors.full_messages.each do |message| %>
+              <li><%= message %></li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
+        <div class="field">
+          <%= form.label :title, "タイトル" %>
+          <%= form.text_field :title, class: 'form-control' %>
+        </div>
+
+        <div class="field">
+          <%= form.label :content, "本文" %>
+          <%= form.text_area :content, class: 'form-control', rows: 10 %>
+        </div>
+
+        <div class="actions">
+          <%= form.submit form_submit_btn, class: 'btn btn-primary', data: { confirm: form_confirm_message } %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

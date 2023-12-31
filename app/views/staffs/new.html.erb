@@ -1,0 +1,55 @@
+<div class="container">
+  <div class="container_box">
+    <div class="news_side_header">
+      <%= render 'users/sidebar' %>
+      <div class="form_box">
+      <%# <h1>新規スタッフ紹介登録</h1> %>
+        <div class="staff_box">
+          <%= form_for @staff do |f| %>
+            <% if @staff.errors.any? %>
+              <div id="error_explanation">
+                <h2><%= pluralize(@staff.errors.count, "error") %> prohibited this staff from being saved:</h2>
+                <ul>
+                <% @staff.errors.full_messages.each do |message| %>
+                  <li><%= message %></li>
+                <% end %>
+                </ul>
+              </div>
+            <% end %>  
+            <%= f.label :スタッフ画像 %><br>
+            <%= f.file_field :image %>
+
+            <p>
+              <%= f.label :名前 %><br>
+              <%= f.text_field :name %>
+            </p>
+
+            <p>
+              <%= f.label :役職 %><br>
+              <%= f.text_field :position %>
+            </p>
+
+            <p>
+              <%= f.label :得意科目 %><br>
+              <%= f.text_field :specialty %>
+            </p>
+
+            <p>
+              <%= f.label :講師からの一言 %><br>
+              <%= f.text_area :description %>
+            </p>
+
+            <p>
+              <%= f.submit 'CREATE', data: { confirm: '新しい講師情報を作成します。よろしいですか？' } %>
+            </p>
+
+            <p>
+              <%= link_to '戻る', staffs_path, class: 'back_btn' %>
+            </p>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

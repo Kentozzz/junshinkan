@@ -1,0 +1,13 @@
+<div class="sidebar">
+  <%= "こんにちは！ #{current_user.name} さん" %>
+  <%= link_to 'TOPページへ', root_path, class: 'sidebar-link' %>
+  <%= link_to '管理者一覧', users_path, class: 'sidebar-link' %>
+  <% if current_user.admin == true %>
+    <%= link_to '新規管理者作成', new_user_registration_path, class: 'sidebar-link' %>
+  <% end %>
+  <%= link_to '新規講師紹介登録', new_staff_path, class: 'sidebar-link' %>
+  <%= link_to '講師紹介一覧', staffs_path, class: 'sidebar-link' %>
+  <%= link_to '新規ニュース投稿', new_news_path, class: 'sidebar-link' %>
+  <%= link_to 'ニュース一覧', news_index_path, class: 'sidebar-link' %>
+  <!-- サイドバーに他のナビゲーションリンクがある場合は、ここに追加 -->
+</div>
