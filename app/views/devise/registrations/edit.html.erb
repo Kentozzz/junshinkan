@@ -1,6 +1,5 @@
 <div class="container">
   <div class="container_box">
-  <%= console %>
     <%= form_with(model: @user, url: registration_path(@user), local: true, method: :put) do |f| %>
       <%= render "devise/shared/error_messages", resource: resource %>
 

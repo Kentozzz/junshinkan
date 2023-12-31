@@ -30,13 +30,14 @@
             <p>※最高管理者は新規講師紹介の作成、編集、削除権限があります。</p>
           <% end %>
           <% if current_user.id == @user.id || current_user.admin? %>
+          <% unless current_user.id == 1 %>
             <%= link_to '削除', user_registration_path(@user), 
               method: :delete, 
               data: { confirm: '本当に削除しますか？' }, 
               class: 'delete-button' %>
+            <% end %>
             <% if current_user.id == @user.id %>
               <%= link_to '編集', edit_user_registration_path(@user), class: 'edit-button' %>
-
             <% end %>
           <% end %>
         </div>
