@@ -45,10 +45,8 @@
   z-index: 9999;
   box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.1);
   display: flex;
-  justify-content: center;
+  justify-content: right;
   z-index: 100; /* 必要に応じて調整 */
-  display: flex;
-  align-items: center;  /* ナビゲーションバー内の要素を縦方向の中心に揃える */
 
 }
 
@@ -994,7 +992,7 @@ img {
   display: block;
   width: 25px;
   height: 3px;
-  margin: 5px auto;
+  margin: 5px 50px;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
   background-color: #101010;
