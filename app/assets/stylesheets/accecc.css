@@ -33,3 +33,57 @@
     height: 300px; /* モバイルデバイスでのマップの高さ調整 */
   }
 }
+
+.access_images_container {
+  display: flex;
+  flex-direction: column;
+}
+
+.access_image {
+  /* 画像間に20pxの余白を設定 */
+  margin-bottom: 20px;
+}
+
+/* ビューポートの幅が768px以上で、画像を横並びに表示 */
+@media (min-width: 768px) {
+  .access_images_container {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  
+  .access_image {
+    /* 横並びの時は画像の下部マージンを0にし、横の間隙を調整 */
+    margin-bottom: 0; 
+    width: calc(50% - 10px); /* コンテナの幅の50%から画像間のスペースを引く */
+  }
+}
+
+
+.access_image img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px; /* 画像に丸みを帯びたボーダーを追加 */
+}
+
+
+
+
+
+.column {
+  flex: 1;
+  margin: 10px;
+  max-width: 400px;
+}
+
+
+.column_container {
+  display: flex;
+}
+
+
+
+
+
+.column_containeraaa {
+  display: flex;
+}
