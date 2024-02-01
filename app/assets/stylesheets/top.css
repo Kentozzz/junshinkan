@@ -638,6 +638,7 @@ img {
 
 
 
+
 /* 追随するボタンのスタイリング */
 /* 追随するボタンのスタイリング */
 .floating-button {
@@ -949,7 +950,7 @@ img {
 /* スタイルシート（styles.cssまたは適切なCSSファイル） */
 .instructor-content {
   display: flex;
-  flex-direction: row; /* 通常は横並びとして設定 */
+  flex-direction: column; /* 通常は横並びとして設定 */
   /* 必要に応じて他のスタイルも追加 */
 }
 
@@ -960,14 +961,50 @@ img {
 
 /* 768px以下のデバイスで適用 */
 @media (max-width: 768px) {
-  .instructor-content {
-    flex-direction: column-reverse; /* 子要素を逆の順番の縦並びにする */
-  }
-
-  /* このブレークポイント以下では、画像とテキストが100%の幅を取るようにする */
   .instructor-profile,
   .instructor-image-container {
-    width: 100%;
+    width: 100%; /* スマホサイズで全幅使用 */
+  }
+  
+  .instructor-image-container {
+    order: -1; /* 画像を上に表示 */
+  }
+  
+  /* 以下を追加 */
+  .instructor-profile {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+}
+
+/* 基本のスタイル設定 */
+.image_box {
+  width: 100%; /* コンテナの幅を画面幅に合わせる */
+  overflow: hidden; /* はみ出た内容は非表示に */
+}
+
+.slide {
+  width: 100%; /* 画像が画面幅にフィット */
+  height: auto; /* 画像のアスペクト比を保持 */
+  display: block; /* ブロックレベル要素として画像を表示 */
+}
+
+/* デバイスやビューポートの幅に応じたメディアクエリ */
+@media (min-width: 320px) {
+  /* スマートフォン向けスタイル */
+  .slide {
+    /* 必要に応じてスマートフォン向けのスタイル調整 */
+  }
+}
+
+@media (min-width: 768px) {
+  /* タブレット向けスタイル */
+  .image_box {
+    max-width: 720px; /* 画像ボックスの最大幅をタブレット向けに調整 */
+    margin: 0 auto;  /* 中央寄せ */
   }
 }
 
