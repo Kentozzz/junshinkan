@@ -921,3 +921,53 @@ img {
   .staff_container {
     display: flex;
   }
+
+
+
+  /* ここに通常のスタイルを書く */
+.concept {
+  display: flex;
+  justify-content: space-between;
+}
+
+.concept-box, .news_image {
+  /* 必要に応じてスタイルを追加 */
+}
+
+/* ここからメディアクエリを書く */
+@media (max-width: 768px) {
+  .concept {
+    flex-direction: column;
+  }
+
+  .concept-box, .news_image {
+    width: 100%;
+  }
+}
+
+
+/* スタイルシート（styles.cssまたは適切なCSSファイル） */
+.instructor-content {
+  display: flex;
+  flex-direction: row; /* 通常は横並びとして設定 */
+  /* 必要に応じて他のスタイルも追加 */
+}
+
+.instructor-profile,
+.instructor-image-container {
+  /* 必要なスタイルをここで指定 */
+} 
+
+/* 768px以下のデバイスで適用 */
+@media (max-width: 768px) {
+  .instructor-content {
+    flex-direction: column-reverse; /* 子要素を逆の順番の縦並びにする */
+  }
+
+  /* このブレークポイント以下では、画像とテキストが100%の幅を取るようにする */
+  .instructor-profile,
+  .instructor-image-container {
+    width: 100%;
+  }
+}
+

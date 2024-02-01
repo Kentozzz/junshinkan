@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>城南区のアットホームな塾｜純伸舘</title>
+    <title>城西のアットホームな塾｜純伸舘</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -16,20 +16,39 @@
 
   <body>
   <header class="header-fixed">
+
+
   </header>
 
     <%= yield %>
   <footer>
       <div class="footer-container">
-          <p class="company-name">城南区のアットホームな塾 純伸館</p>
-          <p class="contact">Tel: <a href="tel:+1234567890">123-456-7890</a></p>
-          <p class="address">123 Main Street, Anytown, AS 12345</p>
+          <p class="company-name">純伸館</p>
+          <p class="contact">Tel: <a href="tel:+1234567890">092-832-5055</a></p>
+          <p class="address">〒814-0003 福岡県福岡市早良区城西2-2-28 城西アパート 201</p>
           <% if user_signed_in? %>
             <p class="admin_page"><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></p>
             <p class="admin_page"><%= link_to "管理者ページ", new_user_session_path %></p>
           <% else %>
             <p class="admin_page"><%= link_to "管理者ページ", new_user_session_path %></p>
           <% end %>
+
+
+          <p><br>お問い合わせは、以下のSNS/Mailアイコンからお願いします。 </p>
+          <div style="display: flex; align-items: center;">
+            <%= link_to "https://www.instagram.com/jun_shin_kan?utm_source=ig_web_button_share_sheet&igshid=ZDNlZDc0MzIxNw==", target: "_blank" do %>
+              <%= image_tag "Instagram_Glyph_Gradient.png", alt: "Instagram", style: "height: 50px; padding-right: 10px;" %>
+            <% end %>
+            <%= link_to "https://line.me/R/ti/p/@423ednwr?oat_content=url", target: "_blank" do %>
+              <%= image_tag "LINE_Brand_icon.png", alt: "LINE", style: "height: 50px; " %>
+            <% end %>
+            <a href="mailto:fujii@junshinkan.net?subject=お問い合わせ&body=こちらにお問い合わせ内容を入力してください。">
+              <i class="fas fa-envelope fa-3x" style="padding-left: 10px;"></i>
+            </a>
+          </div>
+
+
+
           <p class="copyright">&copy; 2023 純伸館 All Rights Reserved.</p>
       </div>
   </footer>

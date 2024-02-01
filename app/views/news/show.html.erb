@@ -4,7 +4,6 @@
     <%= render 'tops/menu' %>
 
     <div class="news-detail-container">
-
     <% if user_signed_in? && current_user.admin? %>
       <div class="news-actions">
         <%= link_to '編集', edit_news_path(@news), class: 'action-link edit-link' %>
@@ -24,7 +23,7 @@
       </div>
       
       <div class="news-back-link">
-        <%= link_to 'ニュース一覧に戻る', news_index_path, class: 'back-link' %>
+        <%= button_to 'ニュース一覧に戻る', news_index_path, method: :get, class: 'back-link', form: {class: 'inline'} %>
       </div>
     </div>
   </div>

@@ -1,4 +1,36 @@
+.container {
+  padding: 20px;
+}
+
+.container_box {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.map-container {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
 .map-container iframe {
-  max-width: 100%;
-  height: auto;
+  width: 100%;
+  height: 400px; /* 小さい画面サイズでも見やすいように */
+  border: none;
+  border-radius: 8px; /* マップの角を丸く */
+}
+
+/* レスポンシブデザイン */
+@media (max-width: 767px) {
+  .col-md-6.offset-md-3 {
+    padding: 0 15px; /* モバイルビューでの余白調整 */
+  }
+  
+  .map-container iframe {
+    height: 300px; /* モバイルデバイスでのマップの高さ調整 */
+  }
 }
