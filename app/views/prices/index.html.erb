@@ -5,8 +5,10 @@
     ※料金表のダウンロードは
     <%= link_to 'こちら', '/pdfs/r5_price_list.pdf' %><br>
     <p class="highlight">個別指導 スタンダード・アドバンス</p>
-    <div class="timetable">
-      <table>
+      <div class="scrollable-table">
+        <div class="timetable">
+        <table>
+
         <thead>
           <tr>
             <th>-</th>
@@ -54,6 +56,9 @@
           </tr>
         </tbody>
       </table>
+    </div>
+    <p class="scroll-message">横スクロール可能です</p>
+
     </div>
 
     <div class="timetable_box" id="hybrid_online">
@@ -151,21 +156,23 @@
       生徒、保護者、純伸舘の三者でグループを作成し、学習状況を共有します。<br>
     <br>
     <p class="highlight">時間割</p>
-        ※コース案内、時間割表のダウンロードは
+    ※コース案内、時間割表のダウンロードは
     <%= link_to 'こちら', '/pdfs/r5_course_schedules.pdf' %>
-    <table class="timetable">
-      <thead>
-        <tr>
-          <th>時限</th>
-          <th>月曜日</th>
-          <th>火曜日</th>
-          <th>水曜日</th>
-          <th>木曜日</th>
-          <th>金曜日</th>
-          <th>土曜日</th>
-        </tr>
-      </thead>
-      <tbody>
+    <div class="scrollable-table"> <!-- 追加したスクロール可能なコンテナ -->
+      <table class="timetable">
+        <thead>
+          <tr>
+            <th>時限</th>
+            <th>月曜日</th>
+            <th>火曜日</th>
+            <th>水曜日</th>
+            <th>木曜日</th>
+            <th>金曜日</th>
+            <th>土曜日</th>
+          </tr>
+        </thead>
+        <tbody>
+
         <tr>
           <td>15:50~17:00</td>
           <td>個</td>
@@ -220,9 +227,12 @@
           <td>質</td>
           <td>質</td>
         </tr>
-        <!-- 以下、3限目以降の授業を追加していく -->
       </tbody>
     </table>
+        <p class="scroll-message">横スクロール可能です</p>
+
+    </div>
+
     ※個...個別指導、自...自習室、質...質問 <br>※休校日:日曜日(テスト前などは開校することがあります。)
     <br>
     <br>

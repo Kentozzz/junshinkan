@@ -81,3 +81,59 @@ body {
   padding-top: 70px; /* 上に余白を追加 */
   margin-top: -70px; /* 余白分だけ要素を上に移動 */
 }
+
+/* レスポンシブデザイン */
+.timetable_box {
+  overflow-x: auto; /* 横スクロールを有効化 */
+  -webkit-overflow-scrolling: touch; /* iOSデバイスのスムーズなスクロールのため */
+}
+
+/* レスポンシブデザイン */
+@media only screen and (max-width: 768px) {
+  .highlight {
+    font-size: 20px; /* フォントサイズを小さくする */
+  }
+
+  .timetable th, .timetable td {
+    padding: 5px; /* パディングを小さくする */
+    font-size: 12px; /* フォントサイズを小さくする */
+  }
+  
+  .notification-title, .notification-list {
+    font-size: 16px; /* 通知エリアのテキストサイズを調整 */
+  }
+
+  .notification-box {
+    padding: 10px; /* 通知ボックスのパディングを調整 */
+  }
+  
+  /* タイムテーブルボックス及び横スクロール対策 */
+  .timetable_box, #hybrid_online, #self_study_room {
+    margin-top: 50px; /* マージントップを小さくする */
+    padding-top: 50px; /* パディングトップを調整 */
+    overflow-x: auto; /* 横スクロールを有効化 */
+    -webkit-overflow-scrolling: touch; /* iOSデバイスのスムーズなスクロールのため */
+  }
+  
+  body {
+    padding: 0 10px; /* コンテンツ全体に左右の余白を追加 */
+  }
+}
+.scrollable-table {
+  overflow-x: auto;
+}
+
+/* デフォルトではメッセージを隠す */
+.scroll-message {
+  display: none;
+}
+
+/* メディアクエリを使用して小さなデバイスでのみ表示する */
+@media (max-width: 767px) { /* 通常、スマートフォン向けのビューポート幅は767px以下とされる */
+  .scroll-message {
+    display: block;
+    font-size: 0.85em; /* メッセージのフォントサイズを調整 */
+    margin-bottom: 5px; /* メッセージとテーブルの間の余白を設定 */
+    text-align: center; /* メッセージを中央揃えに */
+  }
+}
