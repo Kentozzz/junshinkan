@@ -494,49 +494,37 @@ img {
 
 
 /* Instructor Section Styles */
-.instructor-section {
-  background-color: #ffffff;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
+/* 基本スタイル */
 .instructor-content {
   display: flex;
-  flex-direction: row;
+  flex-wrap: wrap; /* 必要に応じて要素を折り返す */
+  justify-content: center; /* 中央揃え、必要に応じて変更 */
+  align-items: flex-start; /* アイテムを上部から揃える */
 }
 
-.instructor-title {
-  font-size: 2em;
-  font-weight: bold;
-  margin-bottom: 20px;
+.instructor-profile, .instructor-image-container {
+  flex-basis: 100%; /* モバイルではフル幅 */
 }
 
-.instructor-image-container {
-  margin-top: 120px;
-  width: 50%;
-  text-align: right;
-  margin-right: 20px;
+/* PC等大きな画面でのスタイル */
+@media (min-width: 768px) {
+  .instructor-profile, .instructor-image-container {
+    flex-basis: 50%; /* 大きな画面では50%の幅 */
+  }
 
+  .instructor-content {
+    justify-content: space-around; /* アイテム間にスペース */
+  }
+
+  /* 画像の調整 */
+  .instructor-image {
+    max-width: 100%;
+    height: auto;
+  }
 }
-
-.instructor-profile {
-  width: 50%; 
-  text-align: left; 
-  padding: 150px 20px;
-}
-
 
 .instructor-name {
-  font-size: 1.5em;
-  font-weight: bold;
-  margin-bottom: 15px;
-}
-
-.instructor-position,
-.instructor-specialty,
-.instructor-description {
-  margin-bottom: 10px;
+  font-size: 30px;
 }
 
 .btn-instructor {
@@ -946,17 +934,7 @@ img {
 }
 
 
-/* スタイルシート（styles.cssまたは適切なCSSファイル） */
-.instructor-content {
-  display: flex;
-  flex-direction: column; /* 通常は横並びとして設定 */
-  /* 必要に応じて他のスタイルも追加 */
-}
 
-.instructor-profile,
-.instructor-image-container {
-  /* 必要なスタイルをここで指定 */
-} 
 
 /* 768px以下のデバイスで適用 */
 @media (max-width: 768px) {

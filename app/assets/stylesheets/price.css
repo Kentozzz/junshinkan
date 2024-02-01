@@ -35,9 +35,7 @@ body {
   /* 他のスタイルを追加してカスタマイズ（色、マージンなど）*/
 }
 
-.timetable_box {
-  margin-top: 100px;
-}
+
 
 .notification-box {
   border-left: 4px solid #3f72af; /* Accented border on the left */
