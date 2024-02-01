@@ -992,7 +992,7 @@ img {
   display: block;
   width: 25px;
   height: 3px;
-  margin: 5px 50px;
+  margin: 5px 70px;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
   background-color: #101010;
@@ -1008,6 +1008,7 @@ img {
   color: #101010;
   display: block;
   padding: 10px;
+  font-size: 20px;
 }
 
 @media screen and (max-width: 768px) {
