@@ -4,7 +4,7 @@ document.addEventListener("turbolinks:load", function(){
       document.getElementById(id).addEventListener('click', function(event) {
         event.preventDefault();
         const target = document.querySelector(targetSelector);
-        if (id === 'top-link') {
+        if (id === 'top-link' || id === 'top-link2') {
             window.scrollTo({
                 top: 0,
                 behavior: "smooth"
@@ -23,8 +23,16 @@ document.addEventListener("turbolinks:load", function(){
     addSmoothScrollListener('latest-news-link', '#latest-info');
     addSmoothScrollListener('amount-link', '.pricing-section');
     addSmoothScrollListener('instructor-link', '.instructor-section');
+
+    addSmoothScrollListener('top-link2', '.aaa');
+    addSmoothScrollListener('latest-info-link2', '#small-image-box');
+    addSmoothScrollListener('latest-news-link2', '#latest-info');
+    addSmoothScrollListener('amount-link2', '.pricing-section');
+    addSmoothScrollListener('instructor-link2', '.instructor-section');
+
   }
 });
+
 
 window.addEventListener("load", function() {
   if (window.location.pathname === '/') {
