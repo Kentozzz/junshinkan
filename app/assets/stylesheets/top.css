@@ -280,7 +280,6 @@ header {
 
 .concept-box {
   flex: 2;
-  padding: 20px;
   text-align: left;
   max-width: 600px;
 }
