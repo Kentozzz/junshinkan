@@ -1,24 +1,25 @@
-default: &default
+default:
   encoding: utf8
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
 
 development:
-  <<: *default
   adapter: mysql2
   username: root
   password:
   host: localhost
   database: junshinkan_development
+  encoding: utf8
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
 
 test:
-  <<: *default
   adapter: mysql2
   username: root
   password:
   host: localhost
   database: junshinkan_test
+  encoding: utf8
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
 
 production:
-  <<: *default
   adapter: postgresql
   url: <%= ENV['DATABASE_URL'] %>
